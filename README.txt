@@ -1,0 +1,1 @@
+The script mainAll.sh runs all the scripts necessary to compile figures used in the Fuchs-Stone et al. 2022 paper. The scripts use subroutines in the Candis data nalysis suite which can be obtained at http://kestrel.nmt.edu/~raymond/software/candis/candis.html. 

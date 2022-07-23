@@ -1,0 +1,104 @@
+open default.nc netcdf
+set missing value 1.0e30
+set font size 12
+set x size 7
+set y size 6
+set x margin 6
+set y margin 6
+set x axis unknown
+set y axis unknown
+set x axis -0.05 0.45 0.1
+set y axis 0 16 2
+set x name "mass flux (kg/m^2/s)"
+set y name "height (km)"
+set font color black
+set clip on
+read columns x = "mflux1a" y = "z1a"
+draw axes if needed
+set color blue
+set line width 2
+set font color black
+draw curve
+set color black
+set line width default
+set dash 0
+set font color black
+set clip on
+read columns x = "mflux1" y = "z1"
+draw axes if needed
+set color red
+set line width 2
+set font color black
+draw curve
+set color black
+set line width default
+set dash 0
+draw label "a)" at 0.4 14
+set font size 12
+set x size 7
+set y size 6
+set x margin 14.3
+set y margin 6
+set x axis unknown
+set y axis unknown
+set x axis -0.05 0.45 0.1
+set y axis 0 16 2
+set x name "mass flux (kg/m^2/s)"
+set y name ""
+set font color black
+set clip on
+read columns x = "mflux2a" y = "z2a"
+draw axes if needed
+set color blue
+set line width 2
+set font color black
+draw curve
+set color black
+set line width default
+set dash 0
+set font color black
+set clip on
+read columns x = "mflux2" y = "z2"
+draw axes if needed
+set color red
+set line width 2
+set font color black
+draw curve
+set color black
+set line width default
+set dash 0
+draw label "b)" at 0.4 14
+set font size 12
+set x size 7
+set y size 6
+set x margin 22.6
+set y margin 6
+set x axis unknown
+set y axis unknown
+set x axis -0.05 0.45 0.1
+set y axis 0 16 2
+set x name "mass flux(kg/m^2/s)"
+set y name ""
+set font color black
+set clip on
+read columns x = "mflux3a" y = "z3a"
+draw axes if needed
+set color blue
+set line width 2
+set font color black
+draw curve
+set color black
+set line width default
+set dash 0
+set font color black
+set clip on
+read columns x = "mflux3" y = "z3"
+draw axes if needed
+set color red
+set line width 2
+set font color black
+draw curve
+set color black
+set line width default
+set dash 0
+draw label "c)" at 0.4 14

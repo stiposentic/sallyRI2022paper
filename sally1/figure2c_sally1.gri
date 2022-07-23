@@ -1,0 +1,256 @@
+open default.nc netcdf
+set missing value 1.0e30
+set font size 12
+set x size 7
+set y size 6
+set x margin 6
+set y margin 20.5
+set x axis unknown
+set y axis unknown
+set y name "latitude (deg)"
+set x name ""
+set x axis -90 -82 2
+set y axis 24 31 2
+set clip on
+read grid x = "lon"
+read grid y = "lat"
+read grid data = "absvort"
+set image range 0 0.4
+set image colorscale blue 0 yellow 0.4 increment 0.1
+convert grid to image size 300 300
+draw image
+draw axes if needed
+set clip on
+read grid x = "lon"
+read grid y = "lat"
+read grid data = "absvort"
+draw axes if needed
+set color black
+set line width .5
+set dash 5
+draw contour 0 0.4 0.1 unlabelled
+set color black
+set line width default
+set dash 0
+draw image palette axisbottom left 0 right 0.4 increment 0.1 box 6 28.5 13 29.2
+set clip on
+read grid x = "lon"
+read grid y = "lat"
+read grid data = "mflux"
+draw axes if needed
+set color cyan
+set line width 1
+set dash 0
+draw contour 0.1 0.2 0.1 unlabelled
+set color black
+set line width default
+set dash 0
+set clip on
+read grid x = "lon"
+read grid y = "lat"
+read grid data = "mflux"
+draw axes if needed
+set color cyan
+set line width 2
+set dash 0
+draw contour 0.2 0.4 0.1 unlabelled
+set color black
+set line width default
+set dash 0
+set clip on
+read grid x = "lon"
+read grid y = "lat"
+read grid data = "mflux"
+draw axes if needed
+set color cyan
+set line width 3
+set dash 0
+draw contour 0.3 0.6 0.1 unlabelled
+set color black
+set line width default
+set dash 0
+read columns x = "lon.l1" y = "lat.l1" u = "u.l1" v = "v.l1"
+set u scale as x
+set v scale as y
+u *= 0.02
+v *= 0.02
+set arrow size as 15 percent of length
+draw arrows
+draw title "Sally 1, absolute vorticity (1/ks)"
+draw label "2 km" at -84 30
+set font size 12
+set x size 7
+set y size 6
+set x margin 6
+set y margin 13.25
+set x axis unknown
+set y axis unknown
+set y name "latitude (deg)"
+set x name ""
+set x axis -90 -82 2
+set y axis 24 31 2
+set clip on
+read grid x = "lon2t"
+read grid y = "lat2t"
+read grid data = "absvort2t"
+set image range 0 0.4
+set image colorscale blue 0 yellow 0.4 increment 0.1
+convert grid to image size 300 300
+draw image
+draw axes if needed
+set clip on
+read grid x = "lon2t"
+read grid y = "lat2t"
+read grid data = "absvort2t"
+draw axes if needed
+set color black
+set line width .5
+set dash 0
+draw contour 0 0.4 0.1 unlabelled
+set color black
+set line width default
+set dash 0
+set clip on
+read grid x = "lon2t"
+read grid y = "lat2t"
+read grid data = "mflux2t"
+draw axes if needed
+set color cyan
+set line width 1
+set dash 0
+draw contour 0.1 0.2 0.1 unlabelled
+set color black
+set line width default
+set dash 0
+set clip on
+read grid x = "lon2t"
+read grid y = "lat2t"
+read grid data = "mflux2t"
+draw axes if needed
+set color cyan
+set line width 2
+set dash 0
+draw contour 0.2 0.4 0.1 unlabelled
+set color black
+set line width default
+set dash 0
+set clip on
+read grid x = "lon2t"
+read grid y = "lat2t"
+read grid data = "mflux2t"
+draw axes if needed
+set color cyan
+set line width 3
+set dash 0
+draw contour 0.3 0.6 0.1 unlabelled
+set color black
+set line width default
+set dash 0
+read columns x = "lon2t.l2" y = "lat2t.l2" u = "u2t.l2" v = "v2t.l2"
+set u scale as x
+set v scale as y
+u *= 0.02
+v *= 0.02
+set arrow size as 15 percent of length
+draw arrows
+set color white
+set line width 2
+draw line from -85 27 to -84 27
+set color black
+set line width default
+set dash 0
+set color white
+set line width 2
+draw line from -84 27 to -84 28
+set color black
+set line width default
+set dash 0
+set color white
+set line width 2
+draw line from -84 28 to -85 28
+set color black
+set line width default
+set dash 0
+set color white
+set line width 2
+draw line from -85 28 to -85 27
+set color black
+set line width default
+set dash 0
+draw label "4 km" at -84 30
+set font size 12
+set x size 7
+set y size 6
+set x margin 6
+set y margin 6
+set x axis unknown
+set y axis unknown
+set x name "longitude (deg)"
+set y name "latitude (deg)"
+set x axis -90 -82 2
+set y axis 24 31 2
+set clip on
+read grid x = "lon3t"
+read grid y = "lat3t"
+read grid data = "absvort3t"
+set image range 0 0.4
+set image colorscale blue 0 yellow 0.4 increment 0.1
+convert grid to image size 300 300
+draw image
+draw axes if needed
+set clip on
+read grid x = "lon3t"
+read grid y = "lat3t"
+read grid data = "absvort3t"
+draw axes if needed
+set color black
+set line width .5
+set dash 0
+draw contour 0 0.4 0.1 unlabelled
+set color black
+set line width default
+set dash 0
+set clip on
+read grid x = "lon3t"
+read grid y = "lat3t"
+read grid data = "mflux3t"
+draw axes if needed
+set color cyan
+set line width 1
+set dash 0
+draw contour 0.1 0.2 0.1 unlabelled
+set color black
+set line width default
+set dash 0
+set clip on
+read grid x = "lon3t"
+read grid y = "lat3t"
+read grid data = "mflux3t"
+draw axes if needed
+set color cyan
+set line width 2
+set dash 0
+draw contour 0.2 0.4 0.1 unlabelled
+set color black
+set line width default
+set dash 0
+set clip on
+read grid x = "lon3t"
+read grid y = "lat3t"
+read grid data = "mflux3t"
+draw axes if needed
+set color cyan
+set line width 3
+set dash 0
+draw contour 0.3 0.6 0.1 unlabelled
+set color black
+set line width default
+set dash 0
+read columns x = "lon3t.l3" y = "lat3t.l3" u = "u3t.l3" v = "v3t.l3"
+set u scale as x
+set v scale as y
+u *= 0.02
+v *= 0.02
+set arrow size as 15 percent of length
+draw arrows
+draw label "6 km" at -84 30

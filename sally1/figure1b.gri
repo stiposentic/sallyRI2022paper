@@ -1,0 +1,371 @@
+open default.nc netcdf
+set missing value 1.0e30
+set font size 12
+set x size 7
+set y size 6
+set x margin 6
+set y margin 20.5
+set x axis unknown
+set y axis unknown
+set y name "latitude (deg)"
+set x name ""
+set x axis -91 -82 2
+set y axis 24 31 2
+set clip on
+read grid x = "lon"
+read grid y = "lat"
+read grid data = "sfrac"
+set image range 0.7 0.95
+set image colorscale blue 0.7 yellow 0.95 increment 0.05
+convert grid to image size 300 300
+draw image
+draw axes if needed
+set clip on
+read grid x = "lon"
+read grid y = "lat"
+read grid data = "sfrac"
+draw axes if needed
+set color black
+set line width 0.5
+set dash 0
+draw contour 0.7 0.95 0.05 unlabelled
+set color black
+set line width default
+set dash 0
+draw image palette axisbottom left 0.7 right 0.95 increment 0.05 box 6 28.5 13 29.2
+read columns x = "lon.l1" y = "lat.l1" u = "u.l1" v = "v.l1"
+set u scale as x
+set v scale as y
+u *= 0.02
+v *= 0.02
+set arrow size as 15 percent of length
+draw arrows
+draw title "Saturation fraction, 4 km rel wind 50 m/s/deg"
+draw label "Sally 1" at -84 30
+draw label "a)" at -90 30
+set x size 7
+set y size 6
+set x margin 14.5
+set y margin 20.5
+set x axis unknown
+set y axis unknown
+set y name ""
+set x name ""
+set x axis -91 -82 2
+set y axis 24 31 2
+set clip on
+read grid x = "lon"
+read grid y = "lat"
+read grid data = "ii"
+set image range 0 30
+set image colorscale blue 0 yellow 30 increment 5
+convert grid to image size 300 300
+draw image
+draw axes if needed
+set clip on
+read grid x = "lon"
+read grid y = "lat"
+read grid data = "ii"
+draw axes if needed
+set color black
+set line width .5
+set dash 0
+draw contour 0 30 5 unlabelled
+set color black
+set line width default
+set dash 0
+draw image palette axisbottom left 0 right 30 increment 5 box 14.5 28.5 21.5 29.2
+read columns x = "lon.l2" y = "lat.l2" u = "u.l2" v = "v.l2"
+set u scale as x
+set v scale as y
+u *= 0.02
+v *= 0.02
+set arrow size as 15 percent of length
+draw arrows
+draw title "Instability index"
+draw label "Sally 1" at -84 30
+draw label "b)" at -90 30
+set x size 7
+set y size 6
+set x margin 23.1
+set y margin 20.5
+set x axis unknown
+set y axis unknown
+set y name ""
+set x name ""
+set x axis -91 -82 2
+set y axis 24 31 2
+set clip on
+read grid x = "lon"
+read grid y = "lat"
+read grid data = "dcin"
+set image range -20 12
+set image colorscale blue -20 yellow 12 increment 4
+convert grid to image size 300 300
+draw image
+draw axes if needed
+set clip on
+read grid x = "lon"
+read grid y = "lat"
+read grid data = "dcin"
+draw axes if needed
+set color black
+set line width .5
+set dash 0
+draw contour -20 12 4 unlabelled
+set color black
+set line width default
+set dash 0
+draw image palette axisbottom left -20 right 12 increment 4 box 23.1 28.5 30.1 29.2
+read columns x = "lon.l3" y = "lat.l3" u = "u.l3" v = "v.l3"
+set u scale as x
+set v scale as y
+u *= 0.02
+v *= 0.02
+set arrow size as 15 percent of length
+draw arrows
+draw title "DCIN"
+draw label "Sally 1" at -84 30
+draw label "c)" at -90 30
+set font size 12
+set x size 7
+set y size 6
+set x margin 6
+set y margin 13.25
+set x axis unknown
+set y axis unknown
+set x name ""
+set y name "latitude (deg)"
+set x axis -91 -82 2
+set y axis 24 31 2
+set clip on
+read grid x = "lon2t"
+read grid y = "lat2t"
+read grid data = "sfrac2t"
+set image range 0.7 0.95
+set image colorscale blue 0.7 yellow 0.95 increment 0.05
+convert grid to image size 300 300
+draw image
+draw axes if needed
+set clip on
+read grid x = "lon2t"
+read grid y = "lat2t"
+read grid data = "sfrac2t"
+draw axes if needed
+set color black
+set line width .5
+set dash 0
+draw contour 0.7 0.95 0.05 unlabelled
+set color black
+set line width default
+set dash 0
+read columns x = "lon2t.l4" y = "lat2t.l4" u = "u2t.l4" v = "v2t.l4"
+set u scale as x
+set v scale as y
+u *= 0.02
+v *= 0.02
+set arrow size as 15 percent of length
+draw arrows
+draw label "Sally 2" at -84 30
+draw label "d)" at -90 30
+set x size 7
+set y size 6
+set x margin 14.5
+set y margin 13.25
+set x axis unknown
+set y axis unknown
+set x name ""
+set y name ""
+set x axis -91 -82 2
+set y axis 24 31 2
+set clip on
+read grid x = "lon2t"
+read grid y = "lat2t"
+read grid data = "ii2t"
+set image range 0 30
+set image colorscale blue 0 yellow 30 increment 5
+convert grid to image size 300 300
+draw image
+draw axes if needed
+set clip on
+read grid x = "lon2t"
+read grid y = "lat2t"
+read grid data = "ii2t"
+draw axes if needed
+set color black
+set line width .5
+set dash 0
+draw contour 0 30 5 unlabelled
+set color black
+set line width default
+set dash 0
+read columns x = "lon2t.l5" y = "lat2t.l5" u = "u2t.l5" v = "v2t.l5"
+set u scale as x
+set v scale as y
+u *= 0.02
+v *= 0.02
+set arrow size as 15 percent of length
+draw arrows
+draw label "Sally 2" at -84 30
+draw label "e)" at -90 30
+set x size 7
+set y size 6
+set x margin 23.1
+set y margin 13.25
+set x axis unknown
+set y axis unknown
+set x name ""
+set y name ""
+set x axis -91 -82 2
+set y axis 24 31 2
+set clip on
+read grid x = "lon2t"
+read grid y = "lat2t"
+read grid data = "dcin2t"
+set image range -20 12
+set image colorscale blue -20 yellow 12 increment 4
+convert grid to image size 300 300
+draw image
+draw axes if needed
+set clip on
+read grid x = "lon2t"
+read grid y = "lat2t"
+read grid data = "dcin2t"
+draw axes if needed
+set color black
+set line width .5
+set dash 0
+draw contour -20 12 4 unlabelled
+set color black
+set line width default
+set dash 0
+read columns x = "lon2t.l6" y = "lat2t.l6" u = "u2t.l6" v = "v2t.l6"
+set u scale as x
+set v scale as y
+u *= 0.02
+v *= 0.02
+set arrow size as 15 percent of length
+draw arrows
+draw label "Sally 2" at -84 30
+draw label "f)" at -90 30
+set font size 12
+set x size 7
+set y size 6
+set x margin 6
+set y margin 6
+set x axis unknown
+set y axis unknown
+set x name "longitude (deg)"
+set y name "latitude (deg)"
+set x axis -91 -82 2
+set y axis 24 31 2
+set clip on
+read grid x = "lon3t"
+read grid y = "lat3t"
+read grid data = "sfrac3t"
+set image range 0.7 0.95
+set image colorscale blue 0.7 yellow 0.95 increment 0.05
+convert grid to image size 300 300
+draw image
+draw axes if needed
+set clip on
+read grid x = "lon3t"
+read grid y = "lat3t"
+read grid data = "sfrac3t"
+draw axes if needed
+set color black
+set line width .5
+set dash 0
+draw contour 0.7 0.95 0.05 unlabelled
+set color black
+set line width default
+set dash 0
+read columns x = "lon3t.l7" y = "lat3t.l7" u = "u3t.l7" v = "v3t.l7"
+set u scale as x
+set v scale as y
+u *= 0.02
+v *= 0.02
+set arrow size as 15 percent of length
+draw arrows
+draw label "Sally 3" at -84 30
+draw label "g)" at -90 30
+set x size 7
+set y size 6
+set x margin 14.5
+set y margin 6
+set x axis unknown
+set y axis unknown
+set x name "longitude (deg)"
+set y name ""
+set x axis -91 -82 2
+set y axis 24 31 2
+set clip on
+read grid x = "lon3t"
+read grid y = "lat3t"
+read grid data = "ii3t"
+set image range 0 30
+set image colorscale blue 0 yellow 30 increment 5
+convert grid to image size 300 300
+draw image
+draw axes if needed
+set clip on
+read grid x = "lon3t"
+read grid y = "lat3t"
+read grid data = "ii3t"
+draw axes if needed
+set color black
+set line width .5
+set dash 0
+draw contour 0 30 5 unlabelled
+set color black
+set line width default
+set dash 0
+read columns x = "lon3t.l8" y = "lat3t.l8" u = "u3t.l8" v = "v3t.l8"
+set u scale as x
+set v scale as y
+u *= 0.02
+v *= 0.02
+set arrow size as 15 percent of length
+draw arrows
+draw label "Sally 3" at -84 30
+draw label "h)" at -90 30
+set x size 7
+set y size 6
+set x margin 23.1
+set y margin 6
+set x axis unknown
+set y axis unknown
+set x name "longitude (deg)"
+set y name ""
+set x axis -91 -82 2
+set y axis 24 31 2
+set clip on
+read grid x = "lon3t"
+read grid y = "lat3t"
+read grid data = "dcin3t"
+set image range -20 12
+set image colorscale blue -20 yellow 12 increment 4
+convert grid to image size 300 300
+draw image
+draw axes if needed
+set clip on
+read grid x = "lon3t"
+read grid y = "lat3t"
+read grid data = "dcin3t"
+draw axes if needed
+set color black
+set line width .5
+set dash 0
+draw contour -20 12 4 unlabelled
+set color black
+set line width default
+set dash 0
+read columns x = "lon3t.l9" y = "lat3t.l9" u = "u3t.l9" v = "v3t.l9"
+set u scale as x
+set v scale as y
+u *= 0.02
+v *= 0.02
+set arrow size as 15 percent of length
+draw arrows
+draw label "Sally 3" at -84 30
+draw label "i)" at -90 30

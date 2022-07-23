@@ -1,0 +1,1830 @@
+%!PS-Adobe-2.0 EPSF-1.2
+%%Creator: 
+%%Title: figure4.ps
+%%CreationDate: Mon Jul  4 06:20:58 2022
+%%Pages: (atend)
+%%BoundingBox: (atend)
+% trial bounding box  0.000000 0.000000 0.000000 0.000000
+%%TemplateBox: 0 0 612 792
+%%DocumentFonts: (atend)
+%%Orientation: (atend)
+%%Endcomments
+% NOTE: The Gri postscript dictionary is being converted to the Adobe
+% Illustrator 3.0 dialect of PostScript, as described in the Adobe
+% documents stored at URL
+%   http://www.adobe.com/Support/TechNotes.html
+% (as of Jan 1996, this doc is number 5007).  When the conversion
+% is complete, the Adobe Illustrator drawing program -- and any
+% program compatible with AI -- will be able to edit Gri output.
+%
+% The IslandDraw (TM) program is able to read Gri output
+% at this time; remarkably, it can read/edit arbitrary PostScript.
+%
+% The definitions below are presented in the same order as the Adobe
+% manual.  The stack configuration before and after is shown in curly
+% brackets.  All the operators are listed, but only some are defined
+% here. Most things are faithful, except that no distinction is made
+% between colors for stroking and filling paths.  The string 'WRONGLY'
+% appears with commands that are approximations.
+%
+% PDF-style abbreviations:
+/rg {setrgbcolor} def   % {red green blue}            {-} set RGB color
+/RG {setrgbcolor} def   % {red green blue}            {-} set RGB color
+/q {gsave} def
+/Q {grestore} def
+/W {clip} def
+/W* {eoclip} def
+%
+% Gri-specific abbreviations:
+/hsb {sethsbcolor} def  % {hue saturation brightness} {-} set HSB color
+%
+% Following all try to mimic Adobe Illustrator
+%
+% Mimicking section 5.1 of Adobe manual:
+%A                      % {flag A}          {-} Determine whether
+                        %                       following object can
+                        %                       be selected. Flag=1
+                        %                       prevents selection;
+                        %                       flag=0 allows it.
+
+% Mimicking section 5.2 of Adobe manual:
+%u                      % {u}               {-} start group
+%U                      % end group
+%q                      % as 'u' but first item is a clip path
+%Q                      % as 'U' but first item is a clip path
+
+% Mimicking section 5.3 of Adobe manual:
+/g {setgray} def        % {gray g}          {-} Set gray for fill
+                        %                       path, WRONGLY used
+                        %                       for stroking also. 
+/G {setgray} def        % As 'g', but for filling path.
+%k                      % Set cmyk color for filling path.
+%K                      % As 'k', but for stroking path.
+%x                      % Set cmyk custom color for filling path.
+%X                      % As 'x' but for stroking path.
+%p                      % Define pattern for filling path.
+%P                      % As 'p' but for stroking path.
+%O                      % Specify whether overprinting for fill paths
+%R                      % As 'O' but for stroking path.
+
+% Mimicking section 5.4 of Adobe manual:
+/d {setdash} def        % {[array] phase d} {-} Set dash.
+/i {setflat} def        % {flatness i}      {-} Set flatness.
+/j {setlinejoin} def    % {linejoin j}      {-} Set line join.
+/J {setlinecap} def     % {linecap J}       {-} Set line cap.
+/M {setmiterlimit} def  % {miterlimit M}    {-} Set miter limit.
+/w {setlinewidth} def   % {linewidth w}     {-} Set line width.
+
+% Mimicking section 5.5 of Adobe manual:
+/m {moveto} def         % {x y m}           {-} Move to locn
+/l {lineto} def         % {x y l}           {-} Draw line to locn
+                        %                       not a smooth point.
+                        %                       WRONGLY, no
+                        %                       distinction is made
+                        %                       between smooth and
+                        %                       corner. 
+%L                      % {x y L}           {-} As 'l' but a corner
+%c                      % Bezier curve to smooth point.
+%C                      % As 'c' but to corner point.
+%v                      % Something else to do with Bezier.
+%V                      % 
+%y                      % 
+%Y                      % 
+
+% Mimicking section 5.6 of Adobe manual:
+%N                      % {N}               {-} As 'n' for nondrawn stuff
+/n {newpath} def        % {n}               {-} WRONGLY interpreted
+                        %                       as path constructor
+/F {fill} def           % {F}               {-} Fill current path.
+%f                      % {f}               {-} 'F' but close first
+/S {stroke} def         % {S}               {-} Stroke current path.
+%s                      % {s}               {-} 'S' but close first
+%B                      % {B}               {-} As 's' but don't empty path.
+%b                      % {b}               {-} As 'f' but don't empty path.
+%H                      % no-op (weird huh?)
+/h {closepath} def      % {h}               {-} Close  current path
+%W                      % Used to create masks.
+
+% Mimicking section 5.7 of Adobe manual:
+%a                      % Begin text block ...
+%e                      % Similar to 'a' but ...
+%I                      % Similar to 'a' but ...
+%o                      % Similar to 'a' but ...
+%r                      % Similar to 'a' but ...
+%t                      % {len (string) t}  {-} Render string.
+%T                      % End block of text
+
+% That's the end of the Illustrator stuff. Following are some Gri
+% definitions which provide a temporary way of handling fonts. 
+/sf {setfont} def       % {fontname sf}     {-} Set font name.
+/sh {show} def          % {(text) sh}       {-} Show text.
+/sc {scalefont} def     % {size sc}         {-} Scale font.
+% Gri items which should be translated to Illustrator format:
+/rl {rlineto} def
+/rm {rmoveto} def
+% Procedures
+/cimdict 7 dict def
+/cim {
+ cimdict begin
+ /cl exch def
+ /rw exch def
+ /yur exch def
+ /xur exch def
+ /yll exch def
+ /xll exch def
+ q
+ xll yll translate
+ xur xll sub yur yll sub scale
+ /do cl 3 mul string def
+ cl rw 8 [cl 0 0 rw neg 0 rw] {currentfile do readhexstring pop} false 3 colorimage
+ Q
+ end
+} def
+/imdict 14 dict def
+/im {
+ imdict begin
+ /cl exch def
+ /rw exch def
+ /yur exch def
+ /xur exch def
+ /yll exch def
+ /xll exch def
+ /imagemap exch def
+ q
+ % Until version 2.6.0 used a 'settransfer' here, but that
+ % triggers a bug in ps2pdf
+ xll yll translate
+ xur xll sub yur yll sub scale
+ /do cl string def
+ cl rw 8 [cl 0 0 rw neg 0 rw]
+ {currentfile do readhexstring pop
+  dup length 1 sub 0 1 3 -1 roll
+    { 1 index exch
+      2 copy get imagemap exch get 255 mul cvi put
+    }
+  for
+ }image
+ Q
+ end
+} bind def
+/frdict  5 dict def
+/fr {
+ frdict begin
+ /yt exch def
+ /xr exch def
+ /yb exch def
+ /xl exch def
+ n
+ xl yb m
+ xl yt l
+ xr yt l
+ xr yb l
+ h
+ F
+ n
+ end
+} def
+/plusdict 3 dict def
+/_plus {
+ plusdict begin
+ dup 0.5 mul /t0 exch def
+ /t1 exch def
+ 0 t0 rm
+ 0 t1 neg rl
+ t0 neg t0 rm
+ t1 0 rl
+ t0 neg 0 rm
+ end
+} def
+/timesdict 3 dict def
+/_times {
+ timesdict begin
+ dup 0.353553 mul /t0 exch def
+ 0.707106 mul /t1 exch def
+ t0 neg t0 rm
+ t1 dup neg rl
+ t1 neg 0 rm
+ t1 dup rl
+ t0 neg dup rm
+ end
+} def
+/boxdict 3 dict def
+/_box {
+ boxdict begin
+ dup 0.5 mul /t0 exch def
+ 1 mul /t1 exch def
+ t0 neg t0 rm
+ t1 0 rl
+ 0 t1 neg rl
+ t1 neg 0 rl
+ h
+ t0 dup neg rm
+ end
+} def
+/filledboxdict 3 dict def
+/_filledbox {
+ filledboxdict begin
+ dup 0.5 mul /t0 exch def
+ 1 mul /t1 exch def
+ t0 neg t0 rm
+ t1 0 rl
+ 0 t1 neg rl
+ t1 neg 0 rl
+ h
+ t0 dup neg rm
+ F end
+} def
+/diamonddict 2 dict def
+/_diamond {
+ diamonddict begin
+ 0.5 mul /t0 exch def
+ t0 neg 0 rm
+ t0 dup rl
+ t0 dup neg rl
+ t0 neg dup rl
+ h
+ t0 0 rm
+ end
+} def
+/filleddiamonddict 2 dict def
+/_filleddiamond {
+ filleddiamonddict begin
+ 0.5 mul /t0 exch def
+ t0 neg 0 rm
+ t0 dup rl
+ t0 dup neg rl
+ t0 neg dup rl
+ h
+ t0 0 rm
+ F end
+} def
+/triangleupdict 5 dict def
+/_triangleup {
+ triangleupdict begin
+ dup 0.25 mul /t0 exch def
+ dup 0.433013 mul /t1 exch def
+ dup 0.75 mul /t2 exch def
+ 0.866026 mul /t3 exch def
+ t1 neg t0 neg rm
+ t1 t2 rl
+ t1 t2 neg rl
+ h
+ t1 t0 rm
+ end
+} def
+/filledtriangleupdict 5 dict def
+/_filledtriangleup {
+ filledtriangleupdict begin
+ dup 0.25 mul /t0 exch def
+ dup 0.433013 mul /t1 exch def
+ dup 0.75 mul /t2 exch def
+ 0.866026 mul /t3 exch def
+ t1 neg t0 neg rm
+ t1 t2 rl
+ t1 t2 neg rl
+ h
+ t1 t0 rm
+ F end
+} def
+/trianglerightdict 5 dict def
+/_triangleright {
+ trianglerightdict begin
+ dup 0.25 mul /t0 exch def
+ dup 0.433013 mul /t1 exch def
+ dup 0.75 mul /t2 exch def
+ 0.866026 mul /t3 exch def
+ t0 neg t1 rm
+ t2 t1 neg rl
+ t2 neg t1 neg rl
+ h
+ t0 t1 neg rm
+ end
+} def
+/filledtrianglerightdict 5 dict def
+/_filledtriangleright {
+ filledtrianglerightdict begin
+ dup 0.25 mul /t0 exch def
+ dup 0.433013 mul /t1 exch def
+ dup 0.75 mul /t2 exch def
+ 0.866026 mul /t3 exch def
+ t0 neg t1 rm
+ t2 t1 neg rl
+ t2 neg t1 neg rl
+ h
+ t0 t1 neg rm
+ F end
+} def
+/triangledowndict 5 dict def
+/_triangledown {
+ triangledowndict begin
+ dup 0.25 mul /t0 exch def
+ dup 0.433013 mul /t1 exch def
+ dup 0.75 mul /t2 exch def
+ 0.866026 mul /t3 exch def
+ t1 neg t0 rm
+ t3 0 rl
+ t1 neg t2 neg rl
+ h
+ t1 t0 neg rm
+ end
+} def
+/filledtriangledowndict 5 dict def
+/_filledtriangledown {
+ filledtriangledowndict begin
+ dup 0.25 mul /t0 exch def
+ dup 0.433013 mul /t1 exch def
+ dup 0.75 mul /t2 exch def
+ 0.866026 mul /t3 exch def
+ t1 neg t0 rm
+ t3 0 rl
+ t1 neg t2 neg rl
+ h
+ t1 t0 neg rm
+ F end
+} def
+/triangleleftdict 5 dict def
+/_triangleleft {
+ triangleleftdict begin
+ dup 0.25 mul /t0 exch def
+ dup 0.433013 mul /t1 exch def
+ dup 0.75 mul /t2 exch def
+ 0.866026 mul /t3 exch def
+ t0 t1 rm
+ 0 t3 neg rl
+ t2 neg t1 rl
+ h
+ t0 neg t1 neg rm
+ end
+} def
+/filledtriangleleftdict 5 dict def
+/_filledtriangleleft {
+ filledtriangleleftdict begin
+ dup 0.25 mul /t0 exch def
+ dup 0.433013 mul /t1 exch def
+ dup 0.75 mul /t2 exch def
+ 0.866026 mul /t3 exch def
+ t0 t1 rm
+ 0 t3 neg rl
+ t2 neg t1 rl
+ h
+ t0 neg t1 neg rm
+ F end
+} def
+/circdict 5 dict def
+/_circ {
+ circdict begin
+ 0.5 mul /t0 exch def
+ currentpoint
+ /t2 exch def
+ /t1 exch def
+ S n t1 t2 t0 0 360 arc
+ t1 t2 m
+ end
+} def
+/bulldict 3 dict def
+/_bull {
+ bulldict begin
+ 0.5 mul /r exch def
+ currentpoint /y exch def /x exch def
+ S n x y r 0 360 arc h F S
+ end
+} def
+/filledhalfmoonupdict 3 dict def
+/_filledhalfmoonup {
+ bulldict begin
+ 0.5 mul /r exch def
+ currentpoint /y exch def /x exch def
+ S n x y r 0 180 arc h F S
+ end
+} def
+/filledhalfmoondowndict 3 dict def
+/_filledhalfmoondown {
+ bulldict begin
+ 0.5 mul /r exch def
+ currentpoint /y exch def /x exch def
+ S n x y r 180 360 arc h F S
+ end
+} def
+1 1 scale
+10.0 M
+1 j
+/Courier findfont dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse } forall
+  /Encoding ISOLatin1Encoding def
+  currentdict
+end
+/Courier-ISOLatin1 exch definefont pop
+/Courier-Oblique findfont dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse } forall
+  /Encoding ISOLatin1Encoding def
+  currentdict
+end
+/Courier-Oblique-ISOLatin1 exch definefont pop
+/Courier-Bold findfont dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse } forall
+  /Encoding ISOLatin1Encoding def
+  currentdict
+end
+/Courier-Bold-ISOLatin1 exch definefont pop
+/Courier-BoldOblique findfont dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse } forall
+  /Encoding ISOLatin1Encoding def
+  currentdict
+end
+/Courier-BoldOblique-ISOLatin1 exch definefont pop
+/Helvetica findfont dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse } forall
+  /Encoding ISOLatin1Encoding def
+  currentdict
+end
+/Helvetica-ISOLatin1 exch definefont pop
+/Helvetica-Bold findfont dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse } forall
+  /Encoding ISOLatin1Encoding def
+  currentdict
+end
+/Helvetica-Bold-ISOLatin1 exch definefont pop
+/Helvetica-Oblique findfont dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse } forall
+  /Encoding ISOLatin1Encoding def
+  currentdict
+end
+/Helvetica-Oblique-ISOLatin1 exch definefont pop
+/Palatino-Roman findfont dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse } forall
+  /Encoding ISOLatin1Encoding def
+  currentdict
+end
+/Palatino-Roman-ISOLatin1 exch definefont pop
+/Palatino-Italic findfont dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse } forall
+  /Encoding ISOLatin1Encoding def
+  currentdict
+end
+/Palatino-Italic-ISOLatin1 exch definefont pop
+/Palatino-Bold findfont dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse } forall
+  /Encoding ISOLatin1Encoding def
+  currentdict
+end
+/Palatino-Bold-ISOLatin1 exch definefont pop
+/Palatino-BoldItalic findfont dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse } forall
+  /Encoding ISOLatin1Encoding def
+  currentdict
+end
+/Palatino-BoldItalic-ISOLatin1 exch definefont pop
+/Symbol findfont dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse } forall
+  /Encoding ISOLatin1Encoding def
+  currentdict
+end
+/Symbol-ISOLatin1 exch definefont pop
+/Century findfont dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse } forall
+  /Encoding ISOLatin1Encoding def
+  currentdict
+end
+/Century-ISOLatin1 exch definefont pop
+/Times-Roman findfont dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse } forall
+  /Encoding ISOLatin1Encoding def
+  currentdict
+end
+/Times-Roman-ISOLatin1 exch definefont pop
+/Times-Italic findfont dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse } forall
+  /Encoding ISOLatin1Encoding def
+  currentdict
+end
+/Times-Italic-ISOLatin1 exch definefont pop
+/Times-Bold findfont dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse } forall
+  /Encoding ISOLatin1Encoding def
+  currentdict
+end
+/Times-Bold-ISOLatin1 exch definefont pop
+/Times-BoldItalic findfont dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse } forall
+  /Encoding ISOLatin1Encoding def
+  currentdict
+end
+/Times-BoldItalic-ISOLatin1 exch definefont pop
+%%EndProlog
+%%Page: 1 1
+gsave
+/Helvetica-ISOLatin1 findfont 12.00 sc sf
+0 g
+0 G
+187.3 149.9 m (0) sh
+0 g
+0 G
+222.1 149.9 m (0.1) sh
+0 g
+0 G
+261.9 149.9 m (0.2) sh
+0 g
+0 G
+301.7 149.9 m (0.3) sh
+0 g
+0 G
+341.6 149.9 m (0.4) sh
+0 g
+0 G
+1.0 i 0 J 0 j 0.369 w 10.0 M [] 0 d
+170.70 170.70 m
+190.61 170.70 l
+190.61 165.01 l
+190.61 170.70 l
+230.44 170.70 l
+230.44 165.01 l
+230.44 170.70 l
+270.27 170.70 l
+270.27 165.01 l
+270.27 170.70 l
+310.11 170.70 l
+310.11 165.01 l
+310.11 170.70 l
+349.93 170.70 l
+349.93 165.01 l
+349.93 170.70 l
+369.89 170.70 l
+S
+% END GriPath stroke/fill
+0 g
+0 G
+228.8 134.7 m (abs. vort. \(1/ks\)) sh
+/Helvetica-ISOLatin1 findfont 0.00 sc sf
+0 g
+0 G
+1.0 i 0 J 0 j 0.369 w 10.0 M [] 0 d
+170.70 341.40 m
+190.61 341.40 l
+190.61 347.09 l
+190.61 341.40 l
+230.44 341.40 l
+230.44 347.09 l
+230.44 341.40 l
+270.27 341.40 l
+270.27 347.09 l
+270.27 341.40 l
+310.11 341.40 l
+310.11 347.09 l
+310.11 341.40 l
+349.93 341.40 l
+349.93 347.09 l
+349.93 341.40 l
+369.89 341.40 l
+S
+% END GriPath stroke/fill
+/Helvetica-ISOLatin1 findfont 12.00 sc sf
+0 g
+0 G
+152.5 166.4 m (0) sh
+0 g
+0 G
+152.5 187.7 m (2) sh
+0 g
+0 G
+152.5 209.1 m (4) sh
+0 g
+0 G
+152.5 230.4 m (6) sh
+0 g
+0 G
+152.5 251.7 m (8) sh
+0 g
+0 G
+145.8 273.1 m (10) sh
+0 g
+0 G
+145.8 294.4 m (12) sh
+0 g
+0 G
+145.8 315.7 m (14) sh
+0 g
+0 G
+145.8 337.1 m (16) sh
+0 g
+0 G
+1.0 i 0 J 0 j 0.369 w 10.0 M [] 0 d
+170.70 170.70 m
+170.70 170.70 l
+165.01 170.70 l
+170.70 170.70 l
+170.70 192.04 l
+165.01 192.04 l
+170.70 192.04 l
+170.70 213.38 l
+165.01 213.38 l
+170.70 213.38 l
+170.70 234.71 l
+165.01 234.71 l
+170.70 234.71 l
+170.70 256.05 l
+165.01 256.05 l
+170.70 256.05 l
+170.70 277.39 l
+165.01 277.39 l
+170.70 277.39 l
+170.70 298.72 l
+165.01 298.72 l
+170.70 298.72 l
+170.70 320.06 l
+165.01 320.06 l
+170.70 320.06 l
+170.70 341.40 l
+165.01 341.40 l
+170.70 341.40 l
+170.70 341.40 l
+S
+% END GriPath stroke/fill
+0 g
+0 G
+139.9 225.9 m 90.00 rotate (height \(km\)) sh
+-90.00 rotate /Helvetica-ISOLatin1 findfont 0.00 sc sf
+0 g
+0 G
+1.0 i 0 J 0 j 0.369 w 10.0 M [] 0 d
+369.85 170.70 m
+369.85 170.70 l
+375.54 170.70 l
+369.85 170.70 l
+369.85 192.04 l
+375.54 192.04 l
+369.85 192.04 l
+369.85 213.38 l
+375.54 213.38 l
+369.85 213.38 l
+369.85 234.71 l
+375.54 234.71 l
+369.85 234.71 l
+369.85 256.05 l
+375.54 256.05 l
+369.85 256.05 l
+369.85 277.39 l
+375.54 277.39 l
+369.85 277.39 l
+369.85 298.72 l
+375.54 298.72 l
+369.85 298.72 l
+369.85 320.06 l
+375.54 320.06 l
+369.85 320.06 l
+369.85 341.40 l
+375.54 341.40 l
+369.85 341.40 l
+369.85 341.40 l
+S
+% END GriPath stroke/fill
+/Helvetica-ISOLatin1 findfont 12.00 sc sf
+%^ scale 1 170.7 -0.05 398.3 1 170.7 0 10.6687
+2.000 w
+0 0 1 rg
+0 0 1 RG
+1.0 i 0 J 1 j 2.000 w 10.0 M [] 0 d
+241.25 170.70 m
+241.45 172.83 l
+242.28 174.97 l
+243.66 177.10 l
+244.98 179.24 l
+246.26 181.37 l
+247.28 183.50 l
+247.83 185.64 l
+247.89 187.77 l
+247.71 189.90 l
+247.64 192.04 l
+247.74 194.17 l
+247.76 196.31 l
+247.60 198.44 l
+247.11 200.57 l
+246.40 202.71 l
+245.79 204.84 l
+245.51 206.97 l
+245.20 209.11 l
+244.80 211.24 l
+244.30 213.38 l
+243.67 215.51 l
+242.96 217.64 l
+242.10 219.78 l
+241.27 221.91 l
+240.23 224.04 l
+239.10 226.18 l
+238.12 228.31 l
+237.34 230.44 l
+236.29 232.58 l
+234.80 234.71 l
+233.39 236.85 l
+232.02 238.98 l
+231.06 241.11 l
+230.46 243.25 l
+229.82 245.38 l
+229.07 247.52 l
+228.12 249.65 l
+227.09 251.78 l
+226.17 253.92 l
+225.68 256.05 l
+225.27 258.18 l
+224.75 260.32 l
+223.94 262.45 l
+222.83 264.59 l
+221.53 266.72 l
+220.32 268.85 l
+219.31 270.99 l
+218.49 273.12 l
+217.53 275.25 l
+216.41 277.39 l
+215.25 279.52 l
+214.03 281.66 l
+212.67 283.79 l
+211.61 285.92 l
+210.80 288.06 l
+210.52 290.19 l
+210.44 292.32 l
+209.80 294.46 l
+208.64 296.59 l
+207.66 298.72 l
+206.96 300.86 l
+206.25 302.99 l
+205.31 305.13 l
+204.32 307.26 l
+203.41 309.39 l
+202.74 311.53 l
+202.60 313.66 l
+202.80 315.80 l
+203.05 317.93 l
+203.40 320.06 l
+204.20 322.20 l
+205.45 324.33 l
+207.11 326.46 l
+209.03 328.60 l
+211.10 330.73 l
+213.24 332.86 l
+215.42 335.00 l
+217.61 337.13 l
+219.80 339.27 l
+221.99 341.40 l
+S
+% END GriPath stroke/fill
+[] 0 d
+%^ scale 1 170.7 -0.05 398.3 1 170.7 0 10.6687
+2.000 w
+0 1 0 rg
+0 1 0 RG
+1.0 i 0 J 1 j 2.000 w 10.0 M [] 0 d
+287.02 170.70 m
+307.85 172.83 l
+321.24 174.97 l
+324.86 177.10 l
+324.78 179.24 l
+324.07 181.37 l
+322.50 183.50 l
+320.95 185.64 l
+319.29 187.77 l
+318.11 189.90 l
+316.92 192.04 l
+315.59 194.17 l
+313.69 196.31 l
+311.51 198.44 l
+309.69 200.57 l
+309.96 202.71 l
+311.14 204.84 l
+312.12 206.97 l
+312.22 209.11 l
+311.32 211.24 l
+309.44 213.38 l
+306.63 215.51 l
+303.03 217.64 l
+299.22 219.78 l
+295.34 221.91 l
+290.09 224.04 l
+283.92 226.18 l
+279.45 228.31 l
+275.98 230.44 l
+271.84 232.58 l
+267.37 234.71 l
+263.53 236.85 l
+259.81 238.98 l
+255.43 241.11 l
+251.74 243.25 l
+248.94 245.38 l
+246.07 247.52 l
+242.53 249.65 l
+238.94 251.78 l
+236.42 253.92 l
+235.19 256.05 l
+235.54 258.18 l
+236.44 260.32 l
+236.85 262.45 l
+236.58 264.59 l
+234.85 266.72 l
+232.05 268.85 l
+229.53 270.99 l
+227.24 273.12 l
+225.32 275.25 l
+223.73 277.39 l
+222.32 279.52 l
+220.93 281.66 l
+218.94 283.79 l
+216.02 285.92 l
+212.03 288.06 l
+207.49 290.19 l
+202.98 292.32 l
+198.30 294.46 l
+193.86 296.59 l
+189.89 298.72 l
+187.20 300.86 l
+187.00 302.99 l
+188.93 305.13 l
+190.11 307.26 l
+190.10 309.39 l
+190.14 311.53 l
+189.82 313.66 l
+189.34 315.80 l
+190.73 317.93 l
+193.64 320.06 l
+197.08 322.20 l
+200.59 324.33 l
+204.01 326.46 l
+207.34 328.60 l
+210.53 330.73 l
+213.54 332.86 l
+216.36 335.00 l
+219.01 337.13 l
+221.56 339.27 l
+224.09 341.40 l
+S
+% END GriPath stroke/fill
+[] 0 d
+%^ scale 1 170.7 -0.05 398.3 1 170.7 0 10.6687
+2.000 w
+1 0 0 rg
+1 0 0 RG
+1.0 i 0 J 1 j 2.000 w 10.0 M [] 0 d
+264.59 170.70 m
+275.11 172.83 l
+281.79 174.97 l
+284.64 177.10 l
+285.93 179.24 l
+287.65 181.37 l
+288.73 183.50 l
+289.52 185.64 l
+289.13 187.77 l
+287.02 189.90 l
+283.33 192.04 l
+278.47 194.17 l
+273.54 196.31 l
+269.76 198.44 l
+266.80 200.57 l
+264.86 202.71 l
+264.16 204.84 l
+265.25 206.97 l
+268.25 209.11 l
+270.05 211.24 l
+269.99 213.38 l
+269.20 215.51 l
+269.93 217.64 l
+271.93 219.78 l
+274.51 221.91 l
+275.81 224.04 l
+276.03 226.18 l
+275.80 228.31 l
+274.29 230.44 l
+270.09 232.58 l
+268.06 234.71 l
+267.64 236.85 l
+267.77 238.98 l
+267.88 241.11 l
+267.88 243.25 l
+267.73 245.38 l
+266.43 247.52 l
+266.32 249.65 l
+265.92 251.78 l
+265.98 253.92 l
+266.69 256.05 l
+266.74 258.18 l
+264.42 260.32 l
+261.02 262.45 l
+257.97 264.59 l
+256.02 266.72 l
+256.09 268.85 l
+257.21 270.99 l
+255.32 273.12 l
+251.65 275.25 l
+247.99 277.39 l
+246.07 279.52 l
+245.07 281.66 l
+243.53 283.79 l
+241.47 285.92 l
+240.60 288.06 l
+239.32 290.19 l
+237.19 292.32 l
+234.64 294.46 l
+231.15 296.59 l
+227.44 298.72 l
+225.01 300.86 l
+222.61 302.99 l
+220.37 305.13 l
+218.30 307.26 l
+215.14 309.39 l
+208.97 311.53 l
+205.77 313.66 l
+204.06 315.80 l
+200.15 317.93 l
+197.61 320.06 l
+197.26 322.20 l
+199.14 324.33 l
+202.03 326.46 l
+205.19 328.60 l
+208.38 330.73 l
+211.54 332.86 l
+214.66 335.00 l
+217.74 337.13 l
+220.81 339.27 l
+223.86 341.40 l
+S
+% END GriPath stroke/fill
+[] 0 d
+%^ scale 1 170.7 -0.05 398.3 1 170.7 0 10.6687
+0 g
+0 G
+S
+n
+349.9 320.1 m
+(a\)) sh
+0 g
+0 G
+423.4 149.9 m (0) sh
+0 g
+0 G
+458.2 149.9 m (0.1) sh
+0 g
+0 G
+498.0 149.9 m (0.2) sh
+0 g
+0 G
+537.9 149.9 m (0.3) sh
+0 g
+0 G
+577.7 149.9 m (0.4) sh
+0 g
+0 G
+1.0 i 0 J 0 j 0.369 w 10.0 M [] 0 d
+406.84 170.70 m
+426.75 170.70 l
+426.75 165.01 l
+426.75 170.70 l
+466.58 170.70 l
+466.58 165.01 l
+466.58 170.70 l
+506.41 170.70 l
+506.41 165.01 l
+506.41 170.70 l
+546.24 170.70 l
+546.24 165.01 l
+546.24 170.70 l
+586.07 170.70 l
+586.07 165.01 l
+586.07 170.70 l
+606.02 170.70 l
+S
+% END GriPath stroke/fill
+0 g
+0 G
+464.9 134.7 m (abs. vort. \(1/ks\)) sh
+/Helvetica-ISOLatin1 findfont 0.00 sc sf
+0 g
+0 G
+1.0 i 0 J 0 j 0.369 w 10.0 M [] 0 d
+406.84 341.40 m
+426.75 341.40 l
+426.75 347.09 l
+426.75 341.40 l
+466.58 341.40 l
+466.58 347.09 l
+466.58 341.40 l
+506.41 341.40 l
+506.41 347.09 l
+506.41 341.40 l
+546.24 341.40 l
+546.24 347.09 l
+546.24 341.40 l
+586.07 341.40 l
+586.07 347.09 l
+586.07 341.40 l
+606.02 341.40 l
+S
+% END GriPath stroke/fill
+/Helvetica-ISOLatin1 findfont 12.00 sc sf
+0 g
+0 G
+388.6 166.4 m (0) sh
+0 g
+0 G
+388.6 187.7 m (2) sh
+0 g
+0 G
+388.6 209.1 m (4) sh
+0 g
+0 G
+388.6 230.4 m (6) sh
+0 g
+0 G
+388.6 251.7 m (8) sh
+0 g
+0 G
+381.9 273.1 m (10) sh
+0 g
+0 G
+381.9 294.4 m (12) sh
+0 g
+0 G
+381.9 315.7 m (14) sh
+0 g
+0 G
+381.9 337.1 m (16) sh
+0 g
+0 G
+1.0 i 0 J 0 j 0.369 w 10.0 M [] 0 d
+406.84 170.70 m
+406.84 170.70 l
+401.15 170.70 l
+406.84 170.70 l
+406.84 192.04 l
+401.15 192.04 l
+406.84 192.04 l
+406.84 213.38 l
+401.15 213.38 l
+406.84 213.38 l
+406.84 234.71 l
+401.15 234.71 l
+406.84 234.71 l
+406.84 256.05 l
+401.15 256.05 l
+406.84 256.05 l
+406.84 277.39 l
+401.15 277.39 l
+406.84 277.39 l
+406.84 298.72 l
+401.15 298.72 l
+406.84 298.72 l
+406.84 320.06 l
+401.15 320.06 l
+406.84 320.06 l
+406.84 341.40 l
+401.15 341.40 l
+406.84 341.40 l
+406.84 341.40 l
+S
+% END GriPath stroke/fill
+/Helvetica-ISOLatin1 findfont 0.00 sc sf
+0 g
+0 G
+1.0 i 0 J 0 j 0.369 w 10.0 M [] 0 d
+605.98 170.70 m
+605.98 170.70 l
+611.67 170.70 l
+605.98 170.70 l
+605.98 192.04 l
+611.67 192.04 l
+605.98 192.04 l
+605.98 213.38 l
+611.67 213.38 l
+605.98 213.38 l
+605.98 234.71 l
+611.67 234.71 l
+605.98 234.71 l
+605.98 256.05 l
+611.67 256.05 l
+605.98 256.05 l
+605.98 277.39 l
+611.67 277.39 l
+605.98 277.39 l
+605.98 298.72 l
+611.67 298.72 l
+605.98 298.72 l
+605.98 320.06 l
+611.67 320.06 l
+605.98 320.06 l
+605.98 341.40 l
+611.67 341.40 l
+605.98 341.40 l
+605.98 341.40 l
+S
+% END GriPath stroke/fill
+/Helvetica-ISOLatin1 findfont 12.00 sc sf
+%^ scale 1 406.835 -0.05 398.3 1 170.7 0 10.6687
+2.000 w
+0 0 1 rg
+0 0 1 RG
+1.0 i 0 J 1 j 2.000 w 10.0 M [] 0 d
+487.79 170.70 m
+486.89 172.83 l
+487.20 174.97 l
+488.48 177.10 l
+490.12 179.24 l
+491.82 181.37 l
+493.13 183.50 l
+493.56 185.64 l
+493.65 187.77 l
+493.29 189.90 l
+492.87 192.04 l
+492.43 194.17 l
+491.78 196.31 l
+490.89 198.44 l
+489.90 200.57 l
+489.20 202.71 l
+488.12 204.84 l
+486.41 206.97 l
+484.66 209.11 l
+482.99 211.24 l
+481.67 213.38 l
+480.34 215.51 l
+479.03 217.64 l
+478.26 219.78 l
+478.11 221.91 l
+477.97 224.04 l
+477.65 226.18 l
+477.44 228.31 l
+476.89 230.44 l
+475.44 232.58 l
+474.04 234.71 l
+472.87 236.85 l
+471.53 238.98 l
+470.01 241.11 l
+468.91 243.25 l
+468.39 245.38 l
+468.05 247.52 l
+467.38 249.65 l
+466.20 251.78 l
+465.03 253.92 l
+464.28 256.05 l
+463.95 258.18 l
+463.34 260.32 l
+462.14 262.45 l
+460.50 264.59 l
+459.25 266.72 l
+458.79 268.85 l
+458.84 270.99 l
+458.51 273.12 l
+457.32 275.25 l
+455.89 277.39 l
+454.41 279.52 l
+453.04 281.66 l
+451.85 283.79 l
+450.84 285.92 l
+450.16 288.06 l
+450.58 290.19 l
+451.78 292.32 l
+452.67 294.46 l
+452.55 296.59 l
+451.41 298.72 l
+449.27 300.86 l
+446.72 302.99 l
+444.66 305.13 l
+443.33 307.26 l
+442.58 309.39 l
+441.84 311.53 l
+440.77 313.66 l
+439.99 315.80 l
+439.95 317.93 l
+440.86 320.06 l
+443.11 322.20 l
+445.68 324.33 l
+448.18 326.46 l
+450.18 328.60 l
+451.72 330.73 l
+452.91 332.86 l
+453.89 335.00 l
+454.75 337.13 l
+455.55 339.27 l
+456.35 341.40 l
+S
+% END GriPath stroke/fill
+[] 0 d
+%^ scale 1 406.835 -0.05 398.3 1 170.7 0 10.6687
+2.000 w
+0 1 0 rg
+0 1 0 RG
+1.0 i 0 J 1 j 2.000 w 10.0 M [] 0 d
+538.60 170.70 m
+568.72 172.83 l
+589.09 174.97 l
+595.84 177.10 l
+595.98 179.24 l
+593.65 181.37 l
+589.75 183.50 l
+586.11 185.64 l
+583.35 187.77 l
+580.90 189.90 l
+576.39 192.04 l
+571.74 194.17 l
+569.05 196.31 l
+567.87 198.44 l
+566.61 200.57 l
+564.00 202.71 l
+562.37 204.84 l
+562.56 206.97 l
+562.12 209.11 l
+560.61 211.24 l
+557.94 213.38 l
+553.71 215.51 l
+547.99 217.64 l
+541.57 219.78 l
+534.64 221.91 l
+527.96 224.04 l
+522.52 226.18 l
+518.50 228.31 l
+515.27 230.44 l
+511.98 232.58 l
+506.56 234.71 l
+500.51 236.85 l
+495.28 238.98 l
+491.75 241.11 l
+489.11 243.25 l
+486.22 245.38 l
+484.92 247.52 l
+484.65 249.65 l
+484.53 251.78 l
+484.80 253.92 l
+486.01 256.05 l
+485.21 258.18 l
+482.81 260.32 l
+481.19 262.45 l
+482.02 264.59 l
+484.90 266.72 l
+488.00 268.85 l
+487.88 270.99 l
+485.69 273.12 l
+483.06 275.25 l
+481.88 277.39 l
+482.06 279.52 l
+481.28 281.66 l
+478.07 283.79 l
+474.48 285.92 l
+471.05 288.06 l
+467.92 290.19 l
+465.22 292.32 l
+463.09 294.46 l
+460.55 296.59 l
+457.03 298.72 l
+454.11 300.86 l
+453.07 302.99 l
+453.60 305.13 l
+454.38 307.26 l
+456.69 309.39 l
+459.48 311.53 l
+460.86 313.66 l
+460.88 315.80 l
+459.65 317.93 l
+458.55 320.06 l
+457.39 322.20 l
+455.16 324.33 l
+451.91 326.46 l
+450.20 328.60 l
+450.18 330.73 l
+451.23 332.86 l
+452.78 335.00 l
+454.52 337.13 l
+456.30 339.27 l
+458.09 341.40 l
+S
+% END GriPath stroke/fill
+[] 0 d
+%^ scale 1 406.835 -0.05 398.3 1 170.7 0 10.6687
+2.000 w
+1 0 0 rg
+1 0 0 RG
+1.0 i 0 J 1 j 2.000 w 10.0 M [] 0 d
+493.95 170.70 m
+497.25 172.83 l
+499.38 174.97 l
+499.82 177.10 l
+500.59 179.24 l
+502.42 181.37 l
+505.94 183.50 l
+509.19 185.64 l
+511.48 187.77 l
+512.20 189.90 l
+511.86 192.04 l
+511.07 194.17 l
+509.90 196.31 l
+509.29 198.44 l
+508.74 200.57 l
+506.87 202.71 l
+503.33 204.84 l
+501.62 206.97 l
+502.05 209.11 l
+503.43 211.24 l
+506.24 213.38 l
+509.02 215.51 l
+510.42 217.64 l
+511.41 219.78 l
+514.85 221.91 l
+522.00 224.04 l
+530.36 226.18 l
+536.85 228.31 l
+539.40 230.44 l
+536.95 232.58 l
+531.96 234.71 l
+528.96 236.85 l
+526.90 238.98 l
+523.17 241.11 l
+519.06 243.25 l
+514.85 245.38 l
+509.96 247.52 l
+505.80 249.65 l
+503.05 251.78 l
+499.14 253.92 l
+495.37 256.05 l
+494.91 258.18 l
+494.94 260.32 l
+492.92 262.45 l
+489.59 264.59 l
+484.94 266.72 l
+481.98 268.85 l
+480.20 270.99 l
+479.36 273.12 l
+479.72 275.25 l
+477.96 277.39 l
+473.59 279.52 l
+467.58 281.66 l
+461.69 283.79 l
+458.68 285.92 l
+457.17 288.06 l
+454.75 290.19 l
+451.15 292.32 l
+448.70 294.46 l
+447.82 296.59 l
+447.89 298.72 l
+446.56 300.86 l
+444.82 302.99 l
+443.81 305.13 l
+441.94 307.26 l
+438.93 309.39 l
+433.76 311.53 l
+429.65 313.66 l
+426.81 315.80 l
+424.12 317.93 l
+423.41 320.06 l
+428.33 322.20 l
+433.36 324.33 l
+437.59 326.46 l
+441.39 328.60 l
+445.00 330.73 l
+448.47 332.86 l
+451.80 335.00 l
+455.03 337.13 l
+458.20 339.27 l
+461.38 341.40 l
+S
+% END GriPath stroke/fill
+[] 0 d
+%^ scale 1 406.835 -0.05 398.3 1 170.7 0 10.6687
+0 g
+0 G
+S
+n
+586.1 320.1 m
+(b\)) sh
+0 g
+0 G
+659.5 149.9 m (0) sh
+0 g
+0 G
+694.3 149.9 m (0.1) sh
+0 g
+0 G
+734.2 149.9 m (0.2) sh
+0 g
+0 G
+774.0 149.9 m (0.3) sh
+0 g
+0 G
+813.8 149.9 m (0.4) sh
+0 g
+0 G
+1.0 i 0 J 0 j 0.369 w 10.0 M [] 0 d
+642.97 170.70 m
+662.88 170.70 l
+662.88 165.01 l
+662.88 170.70 l
+702.72 170.70 l
+702.72 165.01 l
+702.72 170.70 l
+742.55 170.70 l
+742.55 165.01 l
+742.55 170.70 l
+782.38 170.70 l
+782.38 165.01 l
+782.38 170.70 l
+822.21 170.70 l
+822.21 165.01 l
+822.21 170.70 l
+842.16 170.70 l
+S
+% END GriPath stroke/fill
+0 g
+0 G
+701.1 134.7 m (abs. vort. \(1/ks\)) sh
+/Helvetica-ISOLatin1 findfont 0.00 sc sf
+0 g
+0 G
+1.0 i 0 J 0 j 0.369 w 10.0 M [] 0 d
+642.97 341.40 m
+662.88 341.40 l
+662.88 347.09 l
+662.88 341.40 l
+702.72 341.40 l
+702.72 347.09 l
+702.72 341.40 l
+742.55 341.40 l
+742.55 347.09 l
+742.55 341.40 l
+782.38 341.40 l
+782.38 347.09 l
+782.38 341.40 l
+822.21 341.40 l
+822.21 347.09 l
+822.21 341.40 l
+842.16 341.40 l
+S
+% END GriPath stroke/fill
+/Helvetica-ISOLatin1 findfont 12.00 sc sf
+0 g
+0 G
+624.7 166.4 m (0) sh
+0 g
+0 G
+624.7 187.7 m (2) sh
+0 g
+0 G
+624.7 209.1 m (4) sh
+0 g
+0 G
+624.7 230.4 m (6) sh
+0 g
+0 G
+624.7 251.7 m (8) sh
+0 g
+0 G
+618.1 273.1 m (10) sh
+0 g
+0 G
+618.1 294.4 m (12) sh
+0 g
+0 G
+618.1 315.7 m (14) sh
+0 g
+0 G
+618.1 337.1 m (16) sh
+0 g
+0 G
+1.0 i 0 J 0 j 0.369 w 10.0 M [] 0 d
+642.97 170.70 m
+642.97 170.70 l
+637.28 170.70 l
+642.97 170.70 l
+642.97 192.04 l
+637.28 192.04 l
+642.97 192.04 l
+642.97 213.38 l
+637.28 213.38 l
+642.97 213.38 l
+642.97 234.71 l
+637.28 234.71 l
+642.97 234.71 l
+642.97 256.05 l
+637.28 256.05 l
+642.97 256.05 l
+642.97 277.39 l
+637.28 277.39 l
+642.97 277.39 l
+642.97 298.72 l
+637.28 298.72 l
+642.97 298.72 l
+642.97 320.06 l
+637.28 320.06 l
+642.97 320.06 l
+642.97 341.40 l
+637.28 341.40 l
+642.97 341.40 l
+642.97 341.40 l
+S
+% END GriPath stroke/fill
+/Helvetica-ISOLatin1 findfont 0.00 sc sf
+0 g
+0 G
+1.0 i 0 J 0 j 0.369 w 10.0 M [] 0 d
+842.12 170.70 m
+842.12 170.70 l
+847.81 170.70 l
+842.12 170.70 l
+842.12 192.04 l
+847.81 192.04 l
+842.12 192.04 l
+842.12 213.38 l
+847.81 213.38 l
+842.12 213.38 l
+842.12 234.71 l
+847.81 234.71 l
+842.12 234.71 l
+842.12 256.05 l
+847.81 256.05 l
+842.12 256.05 l
+842.12 277.39 l
+847.81 277.39 l
+842.12 277.39 l
+842.12 298.72 l
+847.81 298.72 l
+842.12 298.72 l
+842.12 320.06 l
+847.81 320.06 l
+842.12 320.06 l
+842.12 341.40 l
+847.81 341.40 l
+842.12 341.40 l
+842.12 341.40 l
+S
+% END GriPath stroke/fill
+/Helvetica-ISOLatin1 findfont 12.00 sc sf
+%^ scale 1 642.97 -0.05 398.3 1 170.7 0 10.6687
+2.000 w
+0 0 1 rg
+0 0 1 RG
+1.0 i 0 J 1 j 2.000 w 10.0 M [] 0 d
+726.53 170.70 m
+729.27 172.83 l
+731.99 174.97 l
+734.14 177.10 l
+735.72 179.24 l
+736.84 181.37 l
+737.35 183.50 l
+737.36 185.64 l
+737.02 187.77 l
+736.23 189.90 l
+735.23 192.04 l
+734.27 194.17 l
+733.43 196.31 l
+732.69 198.44 l
+731.86 200.57 l
+730.69 202.71 l
+729.35 204.84 l
+728.63 206.97 l
+728.24 209.11 l
+727.72 211.24 l
+727.18 213.38 l
+726.52 215.51 l
+725.52 217.64 l
+724.05 219.78 l
+722.03 221.91 l
+719.82 224.04 l
+717.73 226.18 l
+716.12 228.31 l
+714.85 230.44 l
+713.60 232.58 l
+712.18 234.71 l
+710.76 236.85 l
+709.45 238.98 l
+708.25 241.11 l
+706.93 243.25 l
+705.53 245.38 l
+704.06 247.52 l
+702.82 249.65 l
+701.73 251.78 l
+701.02 253.92 l
+700.58 256.05 l
+700.28 258.18 l
+699.94 260.32 l
+699.14 262.45 l
+697.88 264.59 l
+696.35 266.72 l
+694.86 268.85 l
+693.51 270.99 l
+692.15 273.12 l
+690.50 275.25 l
+688.58 277.39 l
+686.93 279.52 l
+685.91 281.66 l
+685.57 283.79 l
+685.91 285.92 l
+686.65 288.06 l
+687.56 290.19 l
+688.45 292.32 l
+688.90 294.46 l
+688.44 296.59 l
+687.08 298.72 l
+685.24 300.86 l
+683.70 302.99 l
+682.37 305.13 l
+680.83 307.26 l
+679.11 309.39 l
+677.65 311.53 l
+677.14 313.66 l
+677.49 315.80 l
+678.30 317.93 l
+679.69 320.06 l
+681.40 322.20 l
+683.20 324.33 l
+684.93 326.46 l
+686.50 328.60 l
+687.86 330.73 l
+688.99 332.86 l
+689.94 335.00 l
+690.75 337.13 l
+691.48 339.27 l
+692.22 341.40 l
+S
+% END GriPath stroke/fill
+[] 0 d
+%^ scale 1 642.97 -0.05 398.3 1 170.7 0 10.6687
+2.000 w
+0 1 0 rg
+0 1 0 RG
+1.0 i 0 J 1 j 2.000 w 10.0 M [] 0 d
+760.97 170.70 m
+773.39 172.83 l
+784.39 174.97 l
+791.36 177.10 l
+795.17 179.24 l
+797.70 181.37 l
+799.83 183.50 l
+800.61 185.64 l
+799.83 187.77 l
+798.17 189.90 l
+796.29 192.04 l
+794.18 194.17 l
+791.73 196.31 l
+788.74 198.44 l
+785.62 200.57 l
+783.25 202.71 l
+781.85 204.84 l
+781.06 206.97 l
+780.47 209.11 l
+779.68 211.24 l
+778.39 213.38 l
+776.68 215.51 l
+774.59 217.64 l
+772.13 219.78 l
+769.69 221.91 l
+766.74 224.04 l
+763.73 226.18 l
+761.82 228.31 l
+760.80 230.44 l
+759.72 232.58 l
+757.80 234.71 l
+754.42 236.85 l
+749.38 238.98 l
+742.86 241.11 l
+735.83 243.25 l
+729.43 245.38 l
+724.23 247.52 l
+721.03 249.65 l
+719.94 251.78 l
+720.47 253.92 l
+722.02 256.05 l
+723.84 258.18 l
+725.18 260.32 l
+725.49 262.45 l
+724.96 264.59 l
+724.65 266.72 l
+725.43 268.85 l
+726.87 270.99 l
+727.49 273.12 l
+726.47 275.25 l
+724.02 277.39 l
+721.38 279.52 l
+719.69 281.66 l
+718.83 283.79 l
+718.30 285.92 l
+717.92 288.06 l
+717.62 290.19 l
+717.35 292.32 l
+716.84 294.46 l
+715.82 296.59 l
+713.96 298.72 l
+711.46 300.86 l
+708.79 302.99 l
+705.87 305.13 l
+702.43 307.26 l
+698.42 309.39 l
+694.15 311.53 l
+689.79 313.66 l
+686.23 315.80 l
+684.00 317.93 l
+683.13 320.06 l
+683.35 322.20 l
+684.30 324.33 l
+685.59 326.46 l
+686.95 328.60 l
+688.20 330.73 l
+689.26 332.86 l
+690.14 335.00 l
+690.90 337.13 l
+691.58 339.27 l
+692.23 341.40 l
+S
+% END GriPath stroke/fill
+[] 0 d
+%^ scale 1 642.97 -0.05 398.3 1 170.7 0 10.6687
+2.000 w
+1 0 0 rg
+1 0 0 RG
+1.0 i 0 J 1 j 2.000 w 10.0 M [] 0 d
+751.02 170.70 m
+763.85 172.83 l
+774.72 174.97 l
+781.18 177.10 l
+784.73 179.24 l
+786.37 181.37 l
+786.68 183.50 l
+785.87 185.64 l
+784.35 187.77 l
+782.43 189.90 l
+780.34 192.04 l
+778.11 194.17 l
+775.93 196.31 l
+774.08 198.44 l
+773.10 200.57 l
+773.40 202.71 l
+774.52 204.84 l
+775.74 206.97 l
+776.46 209.11 l
+776.23 211.24 l
+774.84 213.38 l
+772.60 215.51 l
+770.52 217.64 l
+768.35 219.78 l
+765.17 221.91 l
+761.24 224.04 l
+757.04 226.18 l
+753.81 228.31 l
+751.87 230.44 l
+750.44 232.58 l
+748.48 234.71 l
+745.78 236.85 l
+742.55 238.98 l
+738.89 241.11 l
+734.91 243.25 l
+730.73 245.38 l
+726.49 247.52 l
+723.07 249.65 l
+721.27 251.78 l
+721.26 253.92 l
+722.25 256.05 l
+723.96 258.18 l
+725.82 260.32 l
+726.75 262.45 l
+726.20 264.59 l
+724.46 266.72 l
+722.75 268.85 l
+721.31 270.99 l
+719.42 273.12 l
+716.68 275.25 l
+713.41 277.39 l
+710.58 279.52 l
+708.76 281.66 l
+708.07 283.79 l
+708.09 285.92 l
+708.02 288.06 l
+707.81 290.19 l
+707.72 292.32 l
+707.48 294.46 l
+706.36 296.59 l
+703.95 298.72 l
+701.19 300.86 l
+699.06 302.99 l
+697.69 305.13 l
+695.93 307.26 l
+692.63 309.39 l
+687.68 311.53 l
+683.56 313.66 l
+681.09 315.80 l
+680.15 317.93 l
+680.44 320.06 l
+681.60 322.20 l
+683.26 324.33 l
+685.07 326.46 l
+686.77 328.60 l
+688.24 330.73 l
+689.46 332.86 l
+690.44 335.00 l
+691.26 337.13 l
+691.97 339.27 l
+692.64 341.40 l
+S
+% END GriPath stroke/fill
+[] 0 d
+%^ scale 1 642.97 -0.05 398.3 1 170.7 0 10.6687
+0 g
+0 G
+S
+n
+822.2 320.1 m
+(c\)) sh
+showpage
+%%Trailer
+%%BoundingBox: 129 130 850 349
+%%DocumentFonts: Courier Helvetica Palatino-Roman Palatino-Italic Symbol Times-Roman
+%%Pages: 1
+%%Orientation: Portrait
